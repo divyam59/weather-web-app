@@ -4,7 +4,7 @@
 //     console.log(data);
 //   })
 // })
-
+console.log("working fine bro");
 const weatherForm = document.querySelector('form')
 const search = document.querySelector('input')
 const messone = document.querySelector('#message-1')
