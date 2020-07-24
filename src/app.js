@@ -5,6 +5,7 @@ const forecast = require('./utils/forecast')
 const geocode = require('./utils/geocode')
 //express is a function like object
 const app = express()
+const port = process.env.PORT || 3000
 
 //getting all paths
 const publicdirecaddress = path.join(__dirname,"../public");
@@ -102,6 +103,6 @@ app.get('*',(req,res)=>{
 })
 
 //to start the server
-app.listen(3000, ()=>{
-  console.log('server is on port 3000');
+app.listen(port, ()=>{
+  console.log('server is on port = '+port);
 })
