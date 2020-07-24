@@ -62,7 +62,7 @@ app.get('/weather',(req,res)=>{
     {
       return res.send({error:error})
     }
-    forecast(longitude,latitude,(error,{type,ctemp,ftemp})=>{
+    forecast(longitude,latitude,(error,{type,ctemp,ftemp,humidity})=>{
       if(error)
       {
         return res.send({error})
@@ -72,7 +72,9 @@ app.get('/weather',(req,res)=>{
           location:name,
           forecast: type,
           curr_temp : ctemp,
-          feel_temp:ftemp
+          feel_temp:ftemp,
+          humidity:humidity
+
         })
       }
     })

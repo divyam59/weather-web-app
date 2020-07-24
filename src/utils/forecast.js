@@ -13,7 +13,7 @@ const forecast = (long,lat,callback)=>
       callback('Loaction not found. Try another search.',undefined);
     }
     else {
-            callback(undefined,{type:body.current.weather_descriptions[0],ctemp:body.current.temperature,ftemp:body.current.feelslike})
+            callback(undefined,{type:body.current.weather_descriptions[0],ctemp:body.current.temperature,ftemp:body.current.feelslike,humidity:body.current.humidity})
     }
 
   })
