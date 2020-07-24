@@ -22,7 +22,7 @@ weatherForm.addEventListener('submit',(e)=>{
       else
       {
         messone.textContent=data.location
-        messtwo.textContent= data.forecast
+        messtwo.textContent= 'Weather is ' + data.forecast +' and current temperature is '+data.curr_temp+' F.'
       }
     })
     })
